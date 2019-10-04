@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+    Middleware and routing! :D
+
 - [ ] Describe Middleware?
+
+    Middleware is a function that runs after the clients action but before the server request happens. Middleware can be chained together and combined with other middleware functions with next().
 
 - [ ] Describe a Resource?
 
+    A resource is a collection of related data that can be created, read, updated, and deleted. 
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+    console.logs and JSON objects with an error message
+
 - [ ] How can we partition our application into sub-applications?
+
+    This can be done with routing and middleware. Endpoints that have different databses can be placed into their own router file. Also, operations that will be ran on multiple model functions(such as validating user id's) can be placed into a function and used as middleware on each of the model functions. Separation of concerns is super useful!
 
 ## Project Setup
 
