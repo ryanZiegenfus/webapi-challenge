@@ -54,6 +54,19 @@ server.get('/projects/:id/actions', validateUserId,(req, res) => {
     })
 })
 
+server.get('/projects/:id/actions/:action_id', validateUserId,(req, res) => {
+    const action_id = req.params.action_id
+
+    actionModel
+    .get(action_id)
+    .then(data => {
+        res.status(200).json(data)
+    })
+    .catch(error => {
+        res.status(500).json({ error: "The users information could not be retrieved." })
+    })
+})
+
 server.post('/projects', (req, res) => {
     const Data = req.body;
 
